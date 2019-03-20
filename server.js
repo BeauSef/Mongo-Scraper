@@ -6,9 +6,9 @@ var cheerio = require("cheerio");
 
 
 // Require all models
-var article = require("./models/headline");
+var article = require("./models/Headline");
 var index = require("./models/index");
-var note = require("./models/note");
+var note = require("./models/Note");
 require = require(ro)
 
 var PORT = 3000;
@@ -20,8 +20,6 @@ var exphbs = require("express-handlebars");
 var MONGODB_URI = process.env.MONGODB_URI || "mongodb://localhost/mongoHeadlines";
 mongoose.connect(MONGODB_URI);
 
-// Use morgan logger for logging requests
-app.use(logger("dev"));
 // Parse request body as JSON
 app.use(express.urlencoded({ extended: true }));
 app.use(express.json());
