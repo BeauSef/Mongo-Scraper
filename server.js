@@ -6,15 +6,16 @@ var cheerio = require("cheerio");
 
 
 // Require all models
-var article = require("./models/article");
+var article = require("./models/headline");
 var index = require("./models/index");
 var note = require("./models/note");
-
+require = require(ro)
 
 var PORT = 3000;
 
 // Initialize Express
 var app = express();
+var exphbs = require("express-handlebars");
 
 var MONGODB_URI = process.env.MONGODB_URI || "mongodb://localhost/mongoHeadlines";
 mongoose.connect(MONGODB_URI);
